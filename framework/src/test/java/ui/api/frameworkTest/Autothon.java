@@ -24,5 +24,4 @@ public class Autothon {
   driver.close();
   driver.quit(); 
   }
-
 }
