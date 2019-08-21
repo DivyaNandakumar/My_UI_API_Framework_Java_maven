@@ -16,7 +16,8 @@ import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 public class ApiRequestBuilder {
 
-	public void getRequest(String url, String param) {
+	String json="";
+	public String getRequest(String url, String param) {
 		try {
 			
 			CloseableHttpClient client = HttpClients.createDefault();
@@ -29,10 +30,13 @@ public class ApiRequestBuilder {
 		  //  assertEquals(response.getStatusLine().getStatusCode(),200);
 		    System.out.println(response.getStatusLine().getStatusCode());
 		    System.out.println(json);
+		    return json.toString();
+		    
 		}
 		catch(Exception e)
 		{
 			System.out.println("The Get request errored out : "+e);
+			  return json;
 		}
 	}
 	
@@ -71,7 +75,7 @@ public class ApiRequestBuilder {
 		}
 		catch(Exception e)
 		{
-			System.out.println("The Get request errored out : "+e);
+			System.out.println("The File upload request errored out : "+e);
 		}
 	}
 	
