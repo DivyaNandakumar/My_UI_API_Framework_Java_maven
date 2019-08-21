@@ -9,10 +9,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 public class Autothon {
-
- 
   @Test
   public static void captureScreenMethod() throws Exception{
+	  System.out.println("Inside the screenshot capture method");
 	  String exePath = "src\\assets\\chromedriver.exe";
 	  System.setProperty("webdriver.chrome.driver", exePath);
   System.setProperty("webdriver.gecko.driver","src\\assets\\geckodriver.exe");
